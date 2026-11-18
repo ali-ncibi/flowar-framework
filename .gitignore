@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+wheels/
+.venv/
+venv/
+
+# uv / packaging
+.uv/
+
+# Linting & type checking
+.mypy_cache/
+.ruff_cache/
+
+# Tests & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Training logs (Lightning default_root_dir)
+log/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Local environment files
+.env
+.env.*
+!.env.example

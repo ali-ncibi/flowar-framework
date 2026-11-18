@@ -1,0 +1,156 @@
+[sensors]
+sorted_names = [
+    "CO1",
+    "CO2",
+    "CO3",
+    "DI1",
+    "DI2",
+    "DI3",
+    "DI4",
+    "FO1",
+    "FO2",
+    "FO3",
+    "IR1",
+    "PH1",
+    "PH2",
+    "PH3",
+    "PH4",
+    "PH5",
+    "PH6",
+    "SO1",
+    "SO2",
+    "TE1",
+]
+
+[activities]
+sorted_names = [
+    "BRUSHING_TEETH",
+    "CHANGING_CLOTHES",
+    "GOING_OUT",
+    "HAVING_BREAKFAST",
+    "HAVING_CONVERSATION",
+    "HAVING_DINNER",
+    "HAVING_SHOWER",
+    "HAVING_SNACK",
+    "LAUNDRY",
+    "LISTENING_TO_MUSIC",
+    "NAPPING",
+    "OTHER",
+    "PREPARING_BREAKFAST",
+    "PREPARING_DINNER",
+    "READING_BOOK",
+    "SHAVING",
+    "SLEEPING",
+    "STUDYING",
+    "TALKING_ON_THE_PHONE",
+    "TOILETING",
+    "USING_INTERNET",
+    "WASHING_DISHES",
+    "WATCHING_TV",
+]
+
+[metadata]
+dataset_name = "aras-a-res-2"
+description = "Smart home activity recognition dataset from ARAS (Activity Recognition And Ambient Sensing) project"
+source = "ARAS Project"
+num_residents = 1
+
+[sensors.metadata.CO1]
+type = "contact"
+area = "entrance"
+object = "door"
+
+[sensors.metadata.CO2]
+type = "contact"
+area = "bathroom"
+object = "door"
+
+[sensors.metadata.CO3]
+type = "contact"
+area = "bathroom"
+object = "shower_cabinet"
+
+[sensors.metadata.DI1]
+type = "distance"
+area = "bathroom"
+object = "tap"
+
+[sensors.metadata.DI2]
+type = "distance"
+area = "bathroom"
+object = "wc"
+
+[sensors.metadata.DI3]
+type = "distance"
+area = "livingroom"
+object = "chair"
+
+[sensors.metadata.DI4]
+type = "distance"
+area = "livingroom"
+object = "chair"
+
+[sensors.metadata.FO1]
+type = "pressure"
+area = "livingroom"
+object = "couch"
+
+[sensors.metadata.FO2]
+type = "pressure"
+area = "livingroom"
+object = "couch"
+
+[sensors.metadata.FO3]
+type = "pressure"
+area = "bedroom"
+object = "bed"
+
+[sensors.metadata.IR1]
+type = "motion"
+area = "livingroom"
+object = "tv"
+
+[sensors.metadata.PH1]
+type = "contact"
+area = "bedroom"
+object = "wardrobe"
+
+[sensors.metadata.PH2]
+type = "contact"
+area = "bedroom"
+object = "couch"
+
+[sensors.metadata.PH3]
+type = "contact"
+area = "kitchen"
+object = "fridge"
+
+[sensors.metadata.PH4]
+type = "contact"
+area = "kitchen"
+object = "cupboard"
+
+[sensors.metadata.PH5]
+type = "contact"
+area = "bedroom"
+object = "wardrobe"
+
+[sensors.metadata.PH6]
+type = "contact"
+area = "bathroom"
+object = "cabinet"
+
+[sensors.metadata.SO1]
+type = "sonar"
+area = "hallway"
+object = "hallway"
+
+[sensors.metadata.SO2]
+type = "sonar"
+area = "kitchen"
+object = "kitchen"
+
+[sensors.metadata.TE1]
+type = "temperature"
+area = "kitchen"
+object = "kitchen"

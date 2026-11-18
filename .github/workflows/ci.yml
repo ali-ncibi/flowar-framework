@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  # Needed so the badge auto-commit step can push coverage.svg back to main.
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Check out the branch (not a detached HEAD) so the badge commit
+          # below can be pushed back.
+          ref: ${{ github.ref }}
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      # Installs Python 3.12 (per requires-python) and all locked dependencies.
+      - name: Install dependencies
+        run: uv sync
+
+      # pytest addopts already enforce --cov=backend --cov-fail-under=100.
+      - name: Run tests with coverage
+        run: uv run pytest
+
+      # coverage-badge imports pkg_resources (setuptools>=81 removed it) and
+      # refuses to overwrite an existing file, so delete the old badge first.
+      - name: Generate coverage badge
+        run: |
+          rm -f coverage.svg
+          uvx --with "setuptools<81" coverage-badge -o coverage.svg
+
+      # Only on pushes to main; skipped for PRs (fork tokens are read-only).
+      # "[skip ci]" avoids re-triggering this workflow on the badge commit.
+      - name: Commit updated badge
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: coverage.svg
+          commit_message: "chore: update coverage badge [skip ci]"

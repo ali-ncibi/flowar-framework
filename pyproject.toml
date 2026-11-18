@@ -1,0 +1,108 @@
+[project]
+name = "flowar"
+version = "0.1.0"
+description = "FlowAR: a modular, data-driven framework for activity recognition in smart environments"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "gensim>=4.4.0",
+    "lightning>=2.6.0",
+    "matplotlib>=3.10",
+    "num2words>=0.5.14",
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "plotly>=6.5.1",
+    "pydantic>=2.12.5",
+    "scikit-learn>=1.8.0",
+    "scikit-optimize>=0.10.2",
+    "scipy>=1.14",
+    "sentence-transformers>=5.2.0",
+    "statsmodels>=0.14.6",
+    "streamlit>=1.52.2",
+    "torch>=2.9.1",
+    "typing-extensions>=4.12",
+    "umap-learn>=0.5.11",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18",
+    "pyright>=1.1.414",
+    "pytest>=8.4",
+    "pytest-cov>=6.0",
+    "ruff>=0.14",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["backend", "frontend"]
+
+# Use CPU-only torch wheels on Linux (Docker image); macOS wheels are CPU-only already.
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu", marker = "sys_platform == 'linux'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+src = ["."]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]  # long string literals are not auto-splittable
+
+[tool.ruff.lint.isort]
+known-first-party = ["backend", "frontend"]
+
+[tool.mypy]
+python_version = "3.12"
+files = ["backend", "frontend", "scripts", "tests"]
+ignore_missing_imports = true
+show_error_codes = true
+pretty = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+no_implicit_optional = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+check_untyped_defs = true
+# Tests deliberately instantiate ABCs, call super() on abstract methods, and
+# pass wrong-typed arguments to exercise error paths.
+disable_error_code = ["abstract", "safe-super", "arg-type", "attr-defined", "union-attr"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = [
+    "--cov=backend",
+    "--cov-report=term-missing",
+    "--cov-fail-under=100",
+    "-ra",
+    "--strict-markers",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::FutureWarning",
+    "ignore::UserWarning",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["backend"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+fail_under = 100
+

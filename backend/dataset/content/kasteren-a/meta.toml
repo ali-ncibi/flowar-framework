@@ -1,0 +1,114 @@
+[sensors]
+sorted_names = [
+    "CUPS_CUPBOARD",
+    "DISHWASHER",
+    "FREEZER",
+    "FRIDGE",
+    "FRONTDOOR",
+    "GROCERIES_CUPBOARD",
+    "HALL_BATHROOM_DOOR",
+    "HALL_BEDROOM_DOOR",
+    "HALL_TOILET_DOOR",
+    "MICROWAVE",
+    "PANS_CUPBOARD",
+    "PLATES_CUPBOARD",
+    "TOILETFLUSH",
+    "WASHINGMACHINE",
+]
+
+[activities]
+sorted_names = [
+    "BRUSH_TEETH",
+    "EATING",
+    "GET_DRINK",
+    "GET_SNACK",
+    "GO_TO_BED",
+    "LEAVE_HOUSE",
+    "NullActivity",
+    "PREPARE_BREAKFAST",
+    "PREPARE_DINNER",
+    "PUT_CLOTHES_IN_WASHINGMACHINE",
+    "PUT_ITEMS_IN_DISHWASHER",
+    "RECEIVE_GUEST",
+    "STORE_GROCERIES",
+    "TAKE_SHOWER",
+    "UNLOAD_DISHWASHER",
+    "UNLOAD_WASHINGMACHINE",
+    "USE_TOILET",
+]
+
+[metadata]
+dataset_name = "kasteren-a"
+description = "Smart home activity recognition dataset from van Kasteren research"
+source = "van Kasteren et al."
+num_residents = 1
+
+[sensors.metadata.CUPS_CUPBOARD]
+type = "contact"
+area = "kitchen"
+object = "cupboard"
+
+[sensors.metadata.DISHWASHER]
+type = "contact"
+area = "kitchen"
+object = "dishwasher"
+
+[sensors.metadata.FREEZER]
+type = "contact"
+area = "kitchen"
+object = "freezer"
+
+[sensors.metadata.FRIDGE]
+type = "contact"
+area = "kitchen"
+object = "fridge"
+
+[sensors.metadata.FRONTDOOR]
+type = "contact"
+area = "entrance"
+object = "door"
+
+[sensors.metadata.GROCERIES_CUPBOARD]
+type = "contact"
+area = "kitchen"
+object = "cupboard"
+
+[sensors.metadata.HALL_BATHROOM_DOOR]
+type = "contact"
+area = "hallway"
+object = "door"
+
+[sensors.metadata.HALL_BEDROOM_DOOR]
+type = "contact"
+area = "hallway"
+object = "door"
+
+[sensors.metadata.HALL_TOILET_DOOR]
+type = "contact"
+area = "hallway"
+object = "door"
+
+[sensors.metadata.MICROWAVE]
+type = "contact"
+area = "kitchen"
+object = "microwave"
+
+[sensors.metadata.PANS_CUPBOARD]
+type = "contact"
+area = "kitchen"
+object = "cupboard"
+
+[sensors.metadata.PLATES_CUPBOARD]
+type = "contact"
+area = "kitchen"
+object = "cupboard"
+
+[sensors.metadata.TOILETFLUSH]
+type = "flush"
+area = "toilet"
+object = "toilet"
+
+[sensors.metadata.WASHINGMACHINE]
+type = "contact"
+area = "kitchen"
+object = "washing_machine"

@@ -1,0 +1,153 @@
+[sensors]
+sorted_names = [
+    "CO1",
+    "CO2",
+    "CO3",
+    "CO4",
+    "CO5",
+    "CO6",
+    "DI2",
+    "FO1",
+    "FO2",
+    "FO3",
+    "PH1",
+    "PH2",
+    "PR1",
+    "PR2",
+    "PR3",
+    "PR4",
+    "PR5",
+    "SO1",
+    "SO2",
+    "SO3",
+]
+
+[activities]
+sorted_names = [
+    "BRUSHING_TEETH",
+    "CHANGING_CLOTHES",
+    "GOING_OUT",
+    "HAVING_BREAKFAST",
+    "HAVING_CONVERSATION",
+    "HAVING_DINNER",
+    "HAVING_LUNCH",
+    "HAVING_SHOWER",
+    "HAVING_SNACK",
+    "NAPPING",
+    "OTHER",
+    "PREPARING_BREAKFAST",
+    "READING_BOOK",
+    "SHAVING",
+    "SLEEPING",
+    "STUDYING",
+    "TALKING_ON_THE_PHONE",
+    "TOILETING",
+    "USING_INTERNET",
+    "WATCHING_TV",
+]
+
+[metadata]
+dataset_name = "aras-b-res-2"
+description = "Smart home activity recognition dataset from ARAS (Activity Recognition And Ambient Sensing) project"
+source = "ARAS Project"
+num_residents = 1
+
+[sensors.metadata.CO1]
+type = "contact"
+area = "kitchen"
+object = "cupboard"
+
+[sensors.metadata.CO2]
+type = "contact"
+area = "kitchen"
+object = "cupboard"
+
+[sensors.metadata.CO3]
+type = "contact"
+area = "entrance"
+object = "door"
+
+[sensors.metadata.CO4]
+type = "contact"
+area = "bedroom"
+object = "wardrobe"
+
+[sensors.metadata.CO5]
+type = "contact"
+area = "bedroom"
+object = "wardrobe"
+
+[sensors.metadata.CO6]
+type = "contact"
+area = "bathroom"
+object = "shower_cabinet"
+
+[sensors.metadata.DI2]
+type = "distance"
+area = "bathroom"
+object = "tap"
+
+[sensors.metadata.FO1]
+type = "pressure"
+area = "livingroom"
+object = "chair"
+
+[sensors.metadata.FO2]
+type = "pressure"
+area = "livingroom"
+object = "chair"
+
+[sensors.metadata.FO3]
+type = "pressure"
+area = "livingroom"
+object = "chair"
+
+[sensors.metadata.PH1]
+type = "contact"
+area = "kitchen"
+object = "fridge"
+
+[sensors.metadata.PH2]
+type = "contact"
+area = "kitchen"
+object = "cupboard"
+
+[sensors.metadata.PR1]
+type = "pressure"
+area = "livingroom"
+object = "couch"
+
+[sensors.metadata.PR2]
+type = "pressure"
+area = "livingroom"
+object = "couch"
+
+[sensors.metadata.PR3]
+type = "pressure"
+area = "bedroom"
+object = "bed"
+
+[sensors.metadata.PR4]
+type = "pressure"
+area = "bedroom"
+object = "bed"
+
+[sensors.metadata.PR5]
+type = "pressure"
+area = "livingroom"
+object = "armchair"
+
+[sensors.metadata.SO1]
+type = "sonar"
+area = "bathroom"
+object = "door"
+
+[sensors.metadata.SO2]
+type = "sonar"
+area = "kitchen"
+object = "kitchen"
+
+[sensors.metadata.SO3]
+type = "sonar"
+area = "bedroom"
+object = "closet"

@@ -1,0 +1,170 @@
+[sensors]
+sorted_names = [
+    "BALCONY_DOOR",
+    "BEDROOM_DOOR",
+    "CUPBOARD_GROCERIES",
+    "CUPBOARD_PLATES",
+    "PRESSURE_MAT_OFFICE_CHAIR_PIANO",
+    "PRESSURE_MAT_SERVER_ROOM_CHAIR",
+    "FRIDGE",
+    "FRONTDOOR",
+    "SINK_FLOAT",
+    "CUTLERY_DRAWER",
+    "DRESSER",
+    "STOVE_LID",
+    "MICROWAVE",
+    "PIR_BATHROOM",
+    "PIR_KITCHEN",
+    "PIR_BEDROOM",
+    "PRESSURE_BED_LEFT",
+    "PRESSURE_BED_RIGHT",
+    "WINDOW",
+    "TOASTER",
+    "TOILET_DOOR",
+    "TOILET_FLUSH",
+]
+
+[activities]
+sorted_names = [
+    "ANSWERING_PHONE",
+    "BRUSH_TEETH",
+    "DROP_DISH_(NO_DISHWASH)",
+    "EAT_BRUNCH",
+    "EAT_DINNER",
+    "FASTEN_KITCHEN_CAMERA",
+    "GET_A_DRINK",
+    "GET_DRESSED",
+    "GO_TO_BED",
+    "GWENN_SEARCHES_KEYS",
+    "INSTALL_SENSOR",
+    "LEAVING_THE_HOUSE",
+    "NullActivity",
+    "ON_PHONE",
+    "PLAY_PIANO",
+    "PREPARE_BRUNCH",
+    "PREPARE_DINNER",
+    "PREPARE_FOR_LEAVING",
+    "SETTING_UP_SENSORS",
+    "SHAVING",
+    "TAKE_SHOWER",
+    "UNPACKING",
+    "USE_TOILET",
+    "WASH_DISHES",
+    "WASH_TOASTER",
+]
+
+[metadata]
+dataset_name = "kasteren-b"
+description = "Smart home activity recognition dataset from van Kasteren research"
+source = "van Kasteren et al."
+num_residents = 1
+
+[sensors.metadata.BALCONY_DOOR]
+type = "contact"
+area = "balcony"
+object = "door"
+
+[sensors.metadata.BEDROOM_DOOR]
+type = "contact"
+area = "bedroom"
+object = "door"
+
+[sensors.metadata.CUPBOARD_GROCERIES]
+type = "contact"
+area = "kitchen"
+object = "cupboard"
+
+[sensors.metadata.CUPBOARD_PLATES]
+type = "contact"
+area = "kitchen"
+object = "cupboard"
+
+[sensors.metadata.PRESSURE_MAT_OFFICE_CHAIR_PIANO]
+type = "pressure"
+area = "living"
+object = "chair"
+
+[sensors.metadata.PRESSURE_MAT_SERVER_ROOM_CHAIR]
+type = "pressure"
+area = "living"
+object = "chair"
+
+[sensors.metadata.FRIDGE]
+type = "contact"
+area = "kitchen"
+object = "fridge"
+
+[sensors.metadata.FRONTDOOR]
+type = "contact"
+area = "entrance"
+object = "door"
+
+[sensors.metadata.SINK_FLOAT]
+type = "float"
+area = "kitchen"
+object = "sink"
+
+[sensors.metadata.CUTLERY_DRAWER]
+type = "contact"
+area = "kitchen"
+object = "drawer"
+
+[sensors.metadata.DRESSER]
+type = "contact"
+area = "bedroom"
+object = "dresser"
+
+[sensors.metadata.STOVE_LID]
+type = "contact"
+area = "kitchen"
+object = "stove"
+
+[sensors.metadata.MICROWAVE]
+type = "contact"
+area = "kitchen"
+object = "microwave"
+
+[sensors.metadata.PIR_BATHROOM]
+type = "motion"
+area = "bathroom"
+object = "bathroom"
+
+[sensors.metadata.PIR_KITCHEN]
+type = "motion"
+area = "kitchen"
+object = "kitchen"
+
+[sensors.metadata.PIR_BEDROOM]
+type = "motion"
+area = "bedroom"
+object = "bedroom"
+
+[sensors.metadata.PRESSURE_BED_LEFT]
+type = "pressure"
+area = "bedroom"
+object = "bed"
+
+[sensors.metadata.PRESSURE_BED_RIGHT]
+type = "pressure"
+area = "bedroom"
+object = "bed"
+
+[sensors.metadata.WINDOW]
+type = "contact"
+area = "living"
+object = "window"
+
+[sensors.metadata.TOASTER]
+type = "contact"
+area = "kitchen"
+object = "toaster"
+
+[sensors.metadata.TOILET_DOOR]
+type = "contact"
+area = "toilet"
+object = "door"
+
+[sensors.metadata.TOILET_FLUSH]
+type = "flush"
+area = "toilet"
+object = "toilet"

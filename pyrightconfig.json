@@ -1,0 +1,27 @@
+{
+  "pythonVersion": "3.12",
+  "include": ["backend", "frontend", "scripts", "tests"],
+  "typeCheckingMode": "standard",
+  "venvPath": ".",
+  "venv": ".venv",
+  "executionEnvironments": [
+    {
+      "root": "tests",
+      "reportAbstractUsage": "none",
+      "reportIncompatibleMethodOverride": "none",
+      "reportArgumentType": "none",
+      "reportAttributeAccessIssue": "none",
+      "reportOptionalMemberAccess": "none",
+      "reportOptionalIterable": "none",
+      "reportOptionalSubscript": "none",
+      "reportGeneralTypeIssues": "none"
+    },
+    {
+      "root": "backend/dataset/methods",
+      "reportArgumentType": "warning",
+      "reportAttributeAccessIssue": "warning",
+      "reportCallIssue": "warning",
+      "reportReturnType": "warning"
+    }
+  ]
+}
