@@ -11,6 +11,35 @@ FlowAR ships with:
 - a **Streamlit frontend** (`frontend/`) to explore smart-home datasets and run each pipeline stage interactively;
 - a **demo script** (`scripts/demo.py`) running cross-validation end to end on a bundled dataset.
 
+## Screenshots
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="docs/screenshots/dataset-explorer.png" alt="Smart Home Dataset Explorer">
+      <b>Dataset explorer</b><br>
+      Explore smart-home datasets, sensor activity, timelines, and relationships.
+    </td>
+    <td width="50%">
+      <img src="docs/screenshots/segmentation.png" alt="Segmentation configuration">
+      <b>Segmentation</b><br>
+      Configure segmentation methods and hyperparameter searches.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="docs/screenshots/feature-representation.png" alt="Feature representation configuration">
+      <b>Feature representation</b><br>
+      Extract and analyze vector or matrix representations of activity segments.
+    </td>
+    <td width="50%">
+      <img src="docs/screenshots/classification.png" alt="Segment classification configuration">
+      <b>Classification</b><br>
+      Run classification pipelines and tune model hyperparameters.
+    </td>
+  </tr>
+</table>
+
 ## Requirements
 
 - [uv](https://docs.astral.sh/uv/) (Python package and project manager)
@@ -96,10 +125,12 @@ flowar-framework/
 │   ├── classification/       #   shallow + deep classifiers, CV, optimization
 │   ├── models.py             #   core data models (Event, Segment, Interval, ...)
 │   └── utils.py
-├── frontend/                      # Streamlit app
+|
+├── frontend/                 # Streamlit app
 │   ├── main.py               #   landing page
 │   ├── pages/                #   0_exploration .. 3_classification
 │   └── components/           #   shared widgets (dataset loader, runners)
+|
 ├── scripts/demo.py           # end-to-end cross-validation demo
 ├── tests/                    # pytest suite (100% backend coverage)
 ├── Dockerfile                # container image for the Streamlit app
